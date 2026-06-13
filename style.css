@@ -216,3 +216,20 @@ button:disabled {
     font-size: 10px;
   }
 }
+.support-footer {
+  margin-top: 18px;
+  padding: 14px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.support-footer a {
+  font-weight: 700;
+  color: #cc6666;
+  text-decoration: none;
+}
+
+.support-footer a:hover {
+  text-decoration: underline;
+}
