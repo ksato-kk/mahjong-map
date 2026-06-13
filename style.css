@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  background: #f4f4f4;
+  color: #222;
+}
+
+.app {
+  width: min(980px, 100%);
+  margin: 0 auto;
+  padding: 14px;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+button {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.soft-button,
+.danger-button {
+  padding: 8px 12px;
+  font-weight: 700;
+}
+
+.soft-button {
+  background: #fff0f0;
+}
+
+.danger-button {
+  background: #ffeeee;
+  color: #cc0000;
+}
+
+.tile-area {
+  display: grid;
+  gap: 10px;
+}
+
+.tile-group {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: white;
+  padding: 10px;
+}
+
+.tile-group-title {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(58px, 1fr));
+  gap: 6px;
+}
+
+.tile-card {
+  min-height: 118px;
+  border: 1px solid #999;
+  border-radius: 8px;
+  background: white;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tile-main-button {
+  flex: 1;
+  min-height: 42px;
+  background: #f9f9f9;
+  font-size: 17px;
+  font-weight: 800;
+  padding: 6px 2px;
+}
+
+.tile-info {
+  min-height: 32px;
+  text-align: center;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.25;
+  color: #555;
+  white-space: pre-line;
+}
+
+.tile-mini-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+
+.tile-mini-actions button {
+  padding: 3px 1px;
+  font-size: 11px;
+  background: #f7f7f7;
+}
+
+.tile-card.count-1 {
+  background: #e8e8e8;
+}
+
+.tile-card.count-1 .tile-main-button {
+  background: #dcdcdc;
+}
+
+.tile-card.count-2 {
+  background: #b0b0b0;
+}
+
+.tile-card.count-2 .tile-main-button {
+  background: #9e9e9e;
+}
+
+.tile-card.count-3 {
+  background: #666;
+}
+
+.tile-card.count-3 .tile-main-button {
+  background: #555;
+  color: white;
+}
+
+.tile-card.count-3 .tile-info {
+  color: white;
+}
+
+.tile-card.count-4 {
+  background: #222;
+}
+
+.tile-card.count-4 .tile-main-button {
+  background: #333;
+  color: #777;
+}
+
+.tile-card.count-4 .tile-info {
+  color: #aaa;
+}
+
+.tile-placeholder {
+  min-height: 118px;
+}
+
+@media (max-width: 720px) {
+  .app-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .header-actions {
+    justify-content: stretch;
+  }
+
+  .header-actions button {
+    flex: 1;
+  }
+
+  .tile-grid {
+    grid-template-columns: repeat(9, minmax(48px, 1fr));
+    gap: 4px;
+  }
+
+  .tile-card {
+    min-height: 108px;
+    padding: 3px;
+  }
+
+  .tile-main-button {
+    font-size: 14px;
+  }
+
+  .tile-info {
+    font-size: 10px;
+  }
+
+  .tile-mini-actions button {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>麻雀マッピング</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <div>
+        <h1>麻雀マッピング</h1>
+        <p>場に出た牌をクリックして、残り枚数を確認するツール</p>
+      </div>
+      <div class="header-actions">
+        <button id="undoBtn" class="soft-button">⬅ 戻る</button>
+        <button id="resetAllBtn" class="danger-button">⚠ マップリセット</button>
+      </div>
+    </header>
+
+    <section id="tileArea" class="tile-area" aria-label="牌一覧"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
